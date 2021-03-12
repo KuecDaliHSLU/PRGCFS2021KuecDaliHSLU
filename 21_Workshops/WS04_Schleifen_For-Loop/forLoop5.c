@@ -2,21 +2,29 @@
 
 int main(int argc, char *argv[] ) 
 {
-	int sum = 0;
-	int start = 1;
-	int end = 100;
+	int start = 0;
+	int end = 99;
 	
-	for ( int i = start; i <= end; i += 10 )
+	
+	// 1. For-Loop für Spalte, beginnt bei 1 und erhöht sich um 10 bis 99
+	for ( int i = start; i < end; i+=10 )
 	{
-		printf("\n%d", i);
+		// muss hier nur Spalte printen und noch keine Werte
+		printf("\n");
 		
-		for( int j = i; j <= i+10; j++)
+		// 2. For-Loop für Zeilen, beginnt bei 1 und erhöht sich immer um 1 bis 10
+		for( int j = 1; j<=10; j++ )
 		{
-			printf("%d", j);
+			// i + j werden addiert und anschliessend geprinted
+			int sum = i + j;
+			printf("%d ", sum);
 		}
+		
+
 				
 	}
 	
+	// gibt am Ende der Zeile eine neue Linie
 	printf ("\n");
 	return 0;
 }
